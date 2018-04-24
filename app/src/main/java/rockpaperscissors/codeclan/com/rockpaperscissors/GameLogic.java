@@ -42,9 +42,6 @@ public class GameLogic {
             return "You win!";
         }
 
-
-//                if (gameLogic.getRandomAnswer() == textView.getText().toString()) {
-//           return "It's a draw!";
        }
     }
 
