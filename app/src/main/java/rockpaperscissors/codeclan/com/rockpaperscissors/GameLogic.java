@@ -29,11 +29,22 @@ public class GameLogic {
         return this.computerAnswers.get(0);
     }
 
-    public String pickWinner(){
-        if (getRandomAnswer() == textView
-        
+    public String pickWinner(String computerHand, String playerHand){
+        if (computerHand == playerHand){
+            return "It's a draw!";
+        } else if ( computerHand == "Rock" && playerHand == "Scissors") {
+            return "Computer wins!";
+        } else if ( computerHand == "Paper" && playerHand == "Rock") {
+            return "Computer wins!";
+        } else if ( computerHand == "Scissors" && playerHand == "Paper") {
+            return "Computer wins!";
+        } else {
+            return "You win!";
+        }
+
+
 //                if (gameLogic.getRandomAnswer() == textView.getText().toString()) {
 //           return "It's a draw!";
-//       }
+       }
     }
-}
+

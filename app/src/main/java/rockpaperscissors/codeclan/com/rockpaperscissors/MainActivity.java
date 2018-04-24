@@ -9,19 +9,20 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    Button buttonRock;
-    Button buttonPaper;
-    Button buttonScissors;
+    Button rockButton;
+    Button paperButton;
+    Button scissorsButton;
     GameLogic gameLogic;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView) findViewById(R.id.computerResultViewID);
-        buttonRock = findViewById(R.id.rockID);
-        buttonPaper = findViewById(R.id.paperID);
-        buttonScissors = findViewById(R.id.scissorsID);
+        textView = findViewById(R.id.computerResultViewID);
+        rockButton = findViewById(R.id.rockID);
+        paperButton = findViewById(R.id.paperID);
+        scissorsButton = findViewById(R.id.scissorsID);
 
         gameLogic = new GameLogic();
 
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onRockButtonClick(View rockButton){
         String computerAnswer = "Computer: " + gameLogic.getRandomAnswer();
-        textView.setText("You pressed Rock!" + "\n" + computerAnswer);
+        String winnerStatement = gameLogic.pickWinner(computerAnswer, "Rock" );
+        textView.setText("You pressed " + "Rock" + "\n" + computerAnswer + "\n" + winnerStatement);
+
     }
 
     public void onPaperButtonClick(View paperButton){
@@ -42,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("You pressed Scissors!" + "\n" + computerAnswer);
     }
 
-    public String calculateWinner(){
-
-    }
+//    public String calculateWinner(){
+//
+//    }
 
 }
