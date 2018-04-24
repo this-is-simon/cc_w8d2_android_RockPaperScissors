@@ -20,10 +20,20 @@ public class GameLogic {
 
     }
 
-    public ArrayList<String> getComputerAnswers(){ return new ArrayList<> (this.computerAnswers)};
+    public ArrayList<String> getComputerAnswers(){
+        return new ArrayList<> (this.computerAnswers);
+    }
 
     public String getRandomAnswer(){
         Collections.shuffle(this.computerAnswers);
         return this.computerAnswers.get(0);
+    }
+
+    public String pickWinner(){
+        if (getRandomAnswer() == textView
+        
+//                if (gameLogic.getRandomAnswer() == textView.getText().toString()) {
+//           return "It's a draw!";
+//       }
     }
 }
