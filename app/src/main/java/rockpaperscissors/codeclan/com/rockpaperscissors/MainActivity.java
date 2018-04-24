@@ -29,24 +29,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRockButtonClick(View rockButton){
-        String computerAnswer = "Computer: " + gameLogic.getRandomAnswer();
+        String computerAnswer = gameLogic.getRandomAnswer();
         String winnerStatement = gameLogic.pickWinner(computerAnswer, "Rock" );
-        textView.setText("You pressed " + "Rock" + "\n" + computerAnswer + "\n" + winnerStatement);
+        textView.setText("You pressed Rock" + "\n" + "The computer answered: " + computerAnswer + "\n" + winnerStatement);
 
     }
 
     public void onPaperButtonClick(View paperButton){
-        String computerAnswer = "Computer: " + gameLogic.getRandomAnswer();
-        textView.setText("You pressed Paper!" + "\n" + computerAnswer);
+        String computerAnswer = gameLogic.getRandomAnswer();
+        String winnerStatement = gameLogic.pickWinner(computerAnswer, "Paper" );
+        textView.setText("You pressed Paper!" + "\n" +"The computer answered: " + computerAnswer + "\n" + winnerStatement);
     }
 
     public void onScissorsButtonClick(View scissorsButton){
-        String computerAnswer = "Computer: " + gameLogic.getRandomAnswer();
-        textView.setText("You pressed Scissors!" + "\n" + computerAnswer);
+        String computerAnswer = gameLogic.getRandomAnswer();
+        String winnerStatement = gameLogic.pickWinner(computerAnswer, "Scissors" );
+        textView.setText("You pressed Scissors!" + "\n" +"The computer answered: " + computerAnswer + "\n" + winnerStatement);
     }
-
-//    public String calculateWinner(){
-//
-//    }
 
 }
