@@ -1,54 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/computerResultViewID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Displays computer answer"
-        android:text="answer"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rockID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:gravity="center_vertical|center_horizontal"
         android:onClick="onRockButtonClick"
         android:text="Rock"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="43dp" />
+        android:textSize="18sp"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/paperID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:background="@android:color/holo_orange_dark"
         android:onClick="onPaperButtonClick"
         android:text="Paper"
-        app:layout_constraintBaseline_toBaselineOf="@+id/rockID"
-        app:layout_constraintEnd_toStartOf="@+id/scissorsID" />
+        android:textSize="18sp"
+        android:layout_margin="5dp" />
 
     <Button
         android:id="@+id/scissorsID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:baselineAligned="false"
         android:onClick="onScissorsButtonClick"
-        android:text="scissors"
-        app:layout_constraintBaseline_toBaselineOf="@+id/paperID"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="Scissors"
+        android:textSize="18sp"
+        android:layout_margin="5dp" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
